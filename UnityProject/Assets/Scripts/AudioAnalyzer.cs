@@ -39,7 +39,6 @@ public class AudioAnalyzer : MonoBehaviour {
 			k++;
 		}
 
-		Debug.Log ("Value of k is " + k);
 
 		band = new float[k+1];
 		g = new GameObject[k+1];
@@ -75,7 +74,6 @@ public class AudioAnalyzer : MonoBehaviour {
 		simpleBands [1] = 0.0f;
 		simpleBands [2] = 0.0f;
 
-		Debug.Log("Frequency Data Length: " + freqData.Length);
 
 		for (int i = 4; i < freqData.Length; i++)
 		{
@@ -107,7 +105,6 @@ public class AudioAnalyzer : MonoBehaviour {
 			{
 				k++;
 				crossover *= 2;   // frequency crossover point for each band.
-				Debug.Log("New Crossover: " + crossover);
 				Vector3 newScale = new Vector3 (g[k].transform.localScale.x, band[k]*32, g[k].transform.localScale.z);
 				g[k].transform.localScale = newScale;
 				band[k] = 0;
