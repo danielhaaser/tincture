@@ -38,7 +38,7 @@ public class ParticleFieldScript : MonoBehaviour {
 
 			// COLOR
 			particle.color = new Color32((byte)(r*255),(byte)(g*255),(byte)(b*255),255);
-			particle.size = treble * 22.0f;
+			particle.size = treble - 0.75f;
 
 			// write over the retreived particle
 			particles[i] = particle;
@@ -47,10 +47,10 @@ public class ParticleFieldScript : MonoBehaviour {
 		particleSystem.SetParticles(particles,particleSystem.particleCount);
 
 		// set a random velocity for the next particle
-		particleSystem.startSpeed = random.Next(0,22);
+		particleSystem.startSpeed = random.Next(0,10) + 2.2f;
 
 		// scale to match the bass
 		float localScale = 222.0f + 222.0f * Mathf.Cos (bass + treble);
-		particleSystem.transform.localScale = new Vector3(localScale,localScale,localScale);
+		particleSystem.transform.localScale = new Vector3(localScale,localScale * 0.5f,localScale);
 	}
 }
