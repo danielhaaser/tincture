@@ -60,11 +60,12 @@
      <Compile Include="Assets\OVR\Scripts\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRUtils.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRVisionGuide.cs" />
-     <Compile Include="Assets\OrbitScript.cs" />
      <Compile Include="Assets\Prettiness\Scripts\ParticleFieldScript.cs" />
      <Compile Include="Assets\Scripts\AudioAnalyzer.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\OrbitScript.cs" />
      <Compile Include="Assets\Scripts\SpectrumView.cs" />
+     <Compile Include="Assets\Scripts\ZJump.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
