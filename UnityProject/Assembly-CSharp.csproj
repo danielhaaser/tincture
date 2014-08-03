@@ -62,6 +62,7 @@
      <Compile Include="Assets\OVR\Scripts\OVRVisionGuide.cs" />
      <Compile Include="Assets\Prettiness\Scripts\ParticleFieldScript.cs" />
      <Compile Include="Assets\Scripts\AudioAnalyzer.cs" />
+     <Compile Include="Assets\Scripts\AudioRotate.cs" />
      <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\OrbitScript.cs" />
      <Compile Include="Assets\Scripts\SpectrumView.cs" />

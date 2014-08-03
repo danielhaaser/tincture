@@ -1338,6 +1338,7 @@ GameObject:
   - 198: {fileID: 1645683617}
   - 199: {fileID: 1645683616}
   - 114: {fileID: 1645683615}
+  - 114: {fileID: 1645683619}
   m_Layer: 0
   m_Name: ParticleField
   m_TagString: Untagged
@@ -1408,7 +1409,7 @@ ParticleSystem:
   looping: 1
   prewarm: 1
   playOnAwake: 1
-  moveWithTransform: 0
+  moveWithTransform: 1
   InitialModule:
     enabled: 1
     startLifetime:
@@ -2459,6 +2460,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1645683619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645683614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7892d40c81d485a44a4743738989bb8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioScriptGameObject: {fileID: 325898966}
 --- !u!1001 &1676926702
 Prefab:
   m_ObjectHideFlags: 0
