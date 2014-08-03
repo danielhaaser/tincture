@@ -4,9 +4,9 @@ using System.Collections;
 public class ParticleFieldScript : MonoBehaviour {
 
 	// all bound between 0 and 100
-	public int bass;
-	public int mid;
-	public int treble;
+	public float bass;
+	public float mid;
+	public float treble;
 
 	private float progress;
 
@@ -18,12 +18,16 @@ public class ParticleFieldScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		bass = Mathf.Clamp(bass,0.0f,1.0f);
+		mid = Mathf.Clamp(mid,0.0f,1.0f);
+		treble = Mathf.Clamp(treble,0.0f,1.0f);
+
 		progress += Time.deltaTime * 0.25f;
 
 		// COLOR
-		float r = (float)(bass + mid * 2 + treble * 3) / 600.0f;
-		float g = (float)(bass * 2 + mid * 2 + treble) / 500.0f;
-		float b = (float)(bass * 4 + mid + treble ) / 600.0f;
+		float r = 1.0f - Mathf.Sin(bass + mid * 2.0f + treble * 3.0f);
+		float g = 1.0f - Mathf.Sin(bass * 2.0f + mid * 2.0f + treble);
+		float b = 1.0f - Mathf.Sin(bass * 4.0f + mid + treble );
 
 		ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
 		particleSystem.GetParticles(particles);
@@ -33,7 +37,7 @@ public class ParticleFieldScript : MonoBehaviour {
 
 			// COLOR
 			particle.color = new Color32((byte)(r*255),(byte)(g*255),(byte)(b*255),255);
-			particle.size = treble * 0.05f;
+			particle.size = treble * 50.0f;
 
 			// write over the retreived particle
 			particles[i] = particle;
@@ -41,7 +45,7 @@ public class ParticleFieldScript : MonoBehaviour {
 		// write over the retreived particle array
 		particleSystem.SetParticles(particles,particleSystem.particleCount);
 
-		float localScale = bass * 5.5f;
-		gameObject.transform.localScale = new Vector3(bass,bass,bass);
+		float localScale = 100.0f + 100.0f * Mathf.Cos (bass);
+		gameObject.transform.localScale = new Vector3(localScale,localScale,localScale);
 	}
 }
