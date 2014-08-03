@@ -11,8 +11,6 @@ public class AudioAnalyzer : MonoBehaviour {
 	public float[] band;
 	public float[] simpleBands;
 
-	public GameObject[] g;
-	public GameObject[] simpleBandObjects;
 
 	// Use this for initialization
 	void Start () 
@@ -39,26 +37,7 @@ public class AudioAnalyzer : MonoBehaviour {
 			k++;
 		}
 
-
 		band = new float[k+1];
-		g = new GameObject[k+1];
-
-		simpleBandObjects = new GameObject[3];
-
-		for (int i = 0; i < band.Length; i++)
-		{
-			band[i] = 0;
-			g[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-			g[i].renderer.material.SetColor("_Color", Color.white);
-			g[i].transform.position = new Vector3(-6 + i, 0, 0);
-		}
-
-		for (int i = 0; i < 3; i++)
-		{
-			simpleBandObjects[i] = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-			simpleBandObjects[i].renderer.material.SetColor("_Color", Color.green);
-			simpleBandObjects[i].transform.position = new Vector3 (-2 + (2 * i), -4, 0);
-		}
 
 		InvokeRepeating ("check", 0.0f, 1.0f / 30.0f);  // 30 fps update
 	}
@@ -105,8 +84,6 @@ public class AudioAnalyzer : MonoBehaviour {
 			{
 				k++;
 				crossover *= 2;   // frequency crossover point for each band.
-				Vector3 newScale = new Vector3 (g[k].transform.localScale.x, band[k]*32, g[k].transform.localScale.z);
-				g[k].transform.localScale = newScale;
 				band[k] = 0;
 			}
 		}
@@ -115,9 +92,6 @@ public class AudioAnalyzer : MonoBehaviour {
 		{
 			simpleBands[z] = simpleBands[z] / 4.0f;
 			simpleBands[z] = Mathf.Clamp(simpleBands[z], 0.0f, 1.0f);
-
-			Vector3 newScale = new Vector3 (simpleBandObjects[z].transform.localScale.x, simpleBands[z] * 4.0f, simpleBandObjects[z].transform.localScale.z);
-			simpleBandObjects[z].transform.localScale = newScale;
 		}
 	}
 	
