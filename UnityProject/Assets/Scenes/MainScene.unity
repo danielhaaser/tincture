@@ -1391,11 +1391,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_SortMode: 0
-<<<<<<< HEAD
   m_Mesh: {fileID: 4300000, guid: 646bd78a893ec433cbe2f3e978536644, type: 3}
-=======
-  m_Mesh: {fileID: 4300000, guid: ac5d67023e9d048a289f7827392cb70e, type: 3}
->>>>>>> fdd2f628b4c3f6b22381fe952031f23a5c20f36c
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -1411,7 +1407,7 @@ ParticleSystem:
   speed: 1
   randomSeed: 0
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
   InitialModule:
@@ -1610,7 +1606,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startRotation:
-      scalar: .785398126
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2459,11 +2455,7 @@ Transform:
   m_PrefabInternal: {fileID: 1616568728}
   m_GameObject: {fileID: 1645683614}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-=======
   m_LocalPosition: {x: 0, y: -30, z: 0}
->>>>>>> fdd2f628b4c3f6b22381fe952031f23a5c20f36c
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
