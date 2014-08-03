@@ -10,17 +10,20 @@ public class ParticleFieldScript : MonoBehaviour {
 
 	private float progress;
 
+	public GameObject audioScriptGameObject;
+	private AudioAnalyzer audioAnalyzer;
+
 	// Use this for initialization
 	void Start () {
-
+		audioAnalyzer = audioScriptGameObject.GetComponent ("AudioAnalyzer") as AudioAnalyzer;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		bass = Mathf.Clamp(bass,0.0f,1.0f);
-		mid = Mathf.Clamp(mid,0.0f,1.0f);
-		treble = Mathf.Clamp(treble,0.0f,1.0f);
+		bass = audioAnalyzer.simpleBands [0];
+		mid = audioAnalyzer.simpleBands [1];
+		treble = audioAnalyzer.simpleBands [2];
 
 		progress += Time.deltaTime * 0.25f;
 
