@@ -13,9 +13,12 @@ public class ParticleFieldScript : MonoBehaviour {
 	public GameObject audioScriptGameObject;
 	private AudioAnalyzer audioAnalyzer;
 
+	/*private Light[] lights;*/ 
+
 	// Use this for initialization
 	void Start () {
 		audioAnalyzer = audioScriptGameObject.GetComponent ("AudioAnalyzer") as AudioAnalyzer;
+		/*lights = new Light[0];*/
 	}
 	
 	// Update is called once per frame
@@ -24,6 +27,15 @@ public class ParticleFieldScript : MonoBehaviour {
 		bass = audioAnalyzer.simpleBands [0];
 		mid = audioAnalyzer.simpleBands [1];
 		treble = audioAnalyzer.simpleBands [2];
+
+		/*
+		// clear lights
+		for (uint i = 0; i < lights.Length; i++) {
+			Light light = lights[i];
+			Destroy (light);
+		}
+		lights = new Light[particleSystem.particleCount];
+		*/
 
 		// COLOR
 		float r = 1.0f - Mathf.Sin(bass + treble * 2.0f);
@@ -39,6 +51,14 @@ public class ParticleFieldScript : MonoBehaviour {
 			// COLOR
 			particle.color = new Color32((byte)(r*255),(byte)(g*255),(byte)(b*255),255);
 			particle.size = treble - 0.75f;
+
+			/*
+			// add a new light
+			Light light = new Light();
+			light.type = LightType.Point;
+			light.transform.position = particle.position;
+			lights[i] = light;
+			*/
 
 			// write over the retreived particle
 			particles[i] = particle;
