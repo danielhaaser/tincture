@@ -84,6 +84,9 @@ public class AudioAnalyzer : MonoBehaviour {
 			{
 				k++;
 				crossover *= 2;   // frequency crossover point for each band.
+
+				//Debug.Log("Crossover " + crossover);
+
 				band[k] = 0;
 			}
 		}

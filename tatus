@@ -1,0 +1,105 @@
+[33mcommit 409f76f002105ef8bd7a0e430337cbfa58b6e2e7[m
+Merge: a74b208 1290a3e
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 04:39:09 2014 -0700
+
+    Merge branch 'master' of https://github.com/djh-/OculusAudioVisualizer
+
+[33mcommit a74b2088309d878efe8f06bee56c862ad74e0b8c[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 04:38:00 2014 -0700
+
+    Separated visual code from audio analyzer
+
+[33mcommit 1290a3e1243146ea94c740bc77ebe3e2dda038ca[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 04:38:22 2014 -0700
+
+    colors reduced to purples and teals
+
+[33mcommit c6585aefb5cda5115497485dbdacb8420bcd8c40[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 03:57:08 2014 -0700
+
+    about to make particles mostly purple/red
+
+[33mcommit 5e9ca86bcc602c4703f53a92e8a15ba9f3a16b70[m
+Merge: 03e1333 62a797e
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 03:55:52 2014 -0700
+
+    Merge branch 'master' of https://github.com/djh-/OculusAudioVisualizer
+
+[33mcommit 03e13333f8b8135ef0734a3743118865c1dd1c34[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 03:47:58 2014 -0700
+
+    time to make some particles different colors
+
+[33mcommit 62a797eb72108e23b92b82144b7da2419869114d[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 03:38:23 2014 -0700
+
+    Hooked up sandbox and particles with audio
+
+[33mcommit 6952e1fe310dafe334db226e478d7efa67598ba1[m
+Merge: 74249d8 70fd303
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 02:59:43 2014 -0700
+
+    Merge branch 'master' of https://github.com/djh-/OculusAudioVisualizer
+
+[33mcommit 74249d813480c4d040ad84d24341e8d7ae879eb1[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 02:59:31 2014 -0700
+
+    some fixes, between 0 and 1
+
+[33mcommit 70fd303b05181ad6138f5b59977bc1ad1a6417c1[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 02:52:18 2014 -0700
+
+    Added bass, mid, treble bands
+
+[33mcommit 4e0fd80237d9fcf32812fac8cf867c7c14732f3c[m
+Merge: b305e21 88aa5d3
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 01:41:10 2014 -0700
+
+    Merge branch 'master' of https://github.com/djh-/OculusAudioVisualizer
+
+[33mcommit b305e21946d8b45799516ca9a13a685216351e43[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 01:40:47 2014 -0700
+
+    Working on simpleBands
+
+[33mcommit 88aa5d3aa4de3993b0aea113a5cd9d647a7bdd10[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 01:40:08 2014 -0700
+
+    and... saving stuff
+
+[33mcommit 988f93a34c48eb166c5d5db3297b91742222de5a[m
+Author: Zachary <zbarryte@mit.edu>
+Date:   Sun Aug 3 01:38:07 2014 -0700
+
+    ADD: some particles, maybe Unity + git won't = terrible?
+
+[33mcommit 4444b8ff2b086aa751ad26367fb1958bf6ddff15[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sun Aug 3 01:36:27 2014 -0700
+
+    Added first analysis stuff
+
+[33mcommit 66709cee89347c42e3ca6a1e5407ea36c98ec802[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sat Aug 2 22:45:31 2014 -0700
+
+    Added Unity stuff to .gitignore
+
+[33mcommit 13abe5e3c342f40c1e93288101b42e56cad1b2af[m
+Author: djh- <thedapperdan@gmail.com>
+Date:   Sat Aug 2 22:41:22 2014 -0700
+
+    :octocat: Added .gitattributes & .gitignore files
