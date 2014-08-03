@@ -19,7 +19,9 @@ public class SpectrumView : MonoBehaviour {
 		for (int i = 0; i < g.Length; i++)
 		{
 			g[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
-			g[i].renderer.material.SetColor("_Color", Color.white);
+			g[i].renderer.material = Resources.Load("shinyMat", typeof(Material)) as Material;
+			                                    
+			//g[i].renderer.material.SetColor("_Color", Color.white);
 			g[i].transform.position = new Vector3(transform.localPosition.x  -4 + i, transform.localPosition.y, transform.localPosition.z);
 		}
 	}
@@ -36,8 +38,8 @@ public class SpectrumView : MonoBehaviour {
 			Vector3 newScale = new Vector3 (g [k].transform.localScale.x, audioAnalyzer.band [k+4] * 20.0f * multFactor, g [k].transform.localScale.z);
 			g [k].transform.localScale = newScale;
 
-			g[k].transform.localEulerAngles = new Vector3 (rotate * audioAnalyzer.simpleBands[1] * 180.0f, g[k].transform.localEulerAngles.y, g[k].transform.localEulerAngles.z);
-			multFactor = multFactor * 1.3f;
+			g[k].transform.localEulerAngles = new Vector3 (rotate * audioAnalyzer.simpleBands[1] * 60.0f, rotate * audioAnalyzer.simpleBands[2] * 10.0f, g[k].transform.localEulerAngles.z);
+			multFactor = multFactor * 1.6f;
 		}
 	}
 }
