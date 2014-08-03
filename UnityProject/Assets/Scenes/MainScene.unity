@@ -466,6 +466,7 @@ MonoBehaviour:
   band: []
   simpleBands: []
   g: []
+  simpleBandObjects: []
 --- !u!4 &1401117573
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class AudioAnalyzer : MonoBehaviour {
 	public float[] simpleBands;
 
 	public GameObject[] g;
+	public GameObject[] simpleBandObjects;
 
 	// Use this for initialization
 	void Start () 
@@ -43,12 +44,21 @@ public class AudioAnalyzer : MonoBehaviour {
 		band = new float[k+1];
 		g = new GameObject[k+1];
 
+		simpleBandObjects = new GameObject[3];
+
 		for (int i = 0; i < band.Length; i++)
 		{
 			band[i] = 0;
 			g[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
 			g[i].renderer.material.SetColor("_Color", Color.white);
 			g[i].transform.position = new Vector3(-6 + i, 0, 0);
+		}
+
+		for (int i = 0; i < 3; i++)
+		{
+			simpleBandObjects[i] = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+			simpleBandObjects[i].renderer.material.SetColor("_Color", Color.green);
+			simpleBandObjects[i].transform.position = new Vector3 (-2 + (2 * i), -4, 0);
 		}
 
 		InvokeRepeating ("check", 0.0f, 1.0f / 30.0f);  // 30 fps update
@@ -67,22 +77,27 @@ public class AudioAnalyzer : MonoBehaviour {
 
 		Debug.Log("Frequency Data Length: " + freqData.Length);
 
-		for (int i = 0; i < freqData.Length; i++)
+		for (int i = 4; i < freqData.Length; i++)
 		{
 			float d = freqData[i];
 			float b = band[k];
 
-			if (crossover > 0 && crossover <= 256)
+			float[] totalBins = new float[3];
+
+			if (crossover > 32 && crossover <= 256)
 			{
-				simpleBands[0] += 1.0f;
+				totalBins[0] += 1.0f;
+				simpleBands[0] += d; 
 			}
 			else if (crossover > 256 && crossover <= 2048)
 			{
-				simpleBands[1] += 1.0f;
+				totalBins[1] += 1.0f;
+				simpleBands[1] += d;
 			}
 			else 
 			{
-				simpleBands[2] += 1.0f;
+				totalBins[2] += 1.0f;
+				simpleBands[2] += d;
 			}
 			
 			// find the max as the peak value in that frequency band.
@@ -97,6 +112,15 @@ public class AudioAnalyzer : MonoBehaviour {
 				g[k].transform.localScale = newScale;
 				band[k] = 0;
 			}
+		}
+
+		for (int z = 0; z < 3; z++)
+		{
+			simpleBands[z] = simpleBands[z] / 4.0f;
+			simpleBands[z] = Mathf.Clamp(simpleBands[z], 0.0f, 1.0f);
+
+			Vector3 newScale = new Vector3 (simpleBandObjects[z].transform.localScale.x, simpleBands[z] * 4.0f, simpleBandObjects[z].transform.localScale.z);
+			simpleBandObjects[z].transform.localScale = newScale;
 		}
 	}
 	
