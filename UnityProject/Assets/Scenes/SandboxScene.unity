@@ -254,7 +254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a94b3192518aa4b21b804c753c77a211, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a94b3192518aa4b21b804c753c77a211, type: 2}
@@ -298,7 +298,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b97e49aa738155c4684c3113e25a239c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b97e49aa738155c4684c3113e25a239c, type: 2}
       propertyPath: aSource
@@ -357,7 +357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1001 &1904416352
 Prefab:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106829
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
       propertyPath: m_LocalRotation.y
@@ -391,19 +391,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: -.707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
-      propertyPath: audioScriptGameObject
-      value: 
-      objectReference: {fileID: 1566913128}
-    - target: {fileID: 19900000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
@@ -451,7 +443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &2086620732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,12 +1554,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 624bd5b8ff8db4c73a1fc025fb9db5c8, type: 2}
   m_PrefabInternal: {fileID: 1904416352}
   m_GameObject: {fileID: 2086620732}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: -.707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!114 &2086620736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1583,4 +1575,4 @@ MonoBehaviour:
   bass: 0
   mid: 0
   treble: 0
-  audioScriptGameObject: {fileID: 1566913128}
+  audioScriptGameObject: {fileID: 0}
