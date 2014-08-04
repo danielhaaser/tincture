@@ -678,7 +678,7 @@ AudioSource:
   m_GameObject: {fileID: 808726658}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 8d56abdf16d97db4cb8e9ea51a6a6393, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f5513377b38c6024f889e995b962097e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -691,7 +691,7 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
-  BypassListenerEffects: 0
+  BypassListenerEffects: 1
   BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
