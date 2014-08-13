@@ -5,10 +5,12 @@ public class AudioRotate : MonoBehaviour {
 
 	public GameObject audioScriptGameObject;
 	private AudioAnalyzer audioAnalyzer;
+	private float yAngleStart;
 
 
 	// Use this for initialization
 	void Start () {
+		yAngleStart = transform.localEulerAngles.y;
 		audioAnalyzer = audioScriptGameObject.GetComponent ("AudioAnalyzer") as AudioAnalyzer;
 	}
 	
@@ -21,7 +23,7 @@ public class AudioRotate : MonoBehaviour {
 		//if (this.transform.localEulerAngles.y > 0.0f) 
 		//{
 			float amountToRotate = this.transform.localEulerAngles.y * 0.6f;
-			this.transform.localEulerAngles = new Vector3(this.transform.localEulerAngles.x, this.transform.localEulerAngles.y - amountToRotate, this.transform.localEulerAngles.z);
+			this.transform.localEulerAngles = new Vector3(this.transform.localEulerAngles.x, yAngleStart - amountToRotate, this.transform.localEulerAngles.z);
 		//}
 		//else 
 		//{

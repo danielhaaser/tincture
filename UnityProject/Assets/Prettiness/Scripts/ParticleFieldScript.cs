@@ -37,6 +37,8 @@ public class ParticleFieldScript : MonoBehaviour {
 		lights = new Light[particleSystem.particleCount];
 		*/
 
+		particleSystem.maxParticles = (int) (8888.0f * (bass + mid + treble));
+
 		// COLOR
 		float r = 1.0f - Mathf.Sin(bass + treble * 2.0f);
 		float g = 1.0f - Mathf.Sin(mid + treble);
